@@ -17,7 +17,7 @@ io.on('connection', function(socket) {
 		  	if (err) return console.log(err)
 		})
 
-		const cmd = spawn("/bin/sh", ["exec.sh"])
+		const cmd = spawn("sh", ['-c', text])
 		var tempText = ""
 		cmd.stdout.on("data", dataCmd => {
 			text = `${dataCmd}`
