@@ -1,1 +1,1 @@
-kafka/bin/kafka-producer-perf-test.sh --topic test --num-records 100000 --record-size 100000 --throughput -1 --producer-props acks=1 bootstrap.servers=143.198.192.122:9092 buffer.memory=67108864 batch.size=8196
+kafka-test/bin/kafka-producer-perf-test.sh --topic test --num-records 100000 --record-size 100000 --throughput -1 --producer-props acks=1 bootstrap.servers=143.198.192.122:9092 buffer.memory=67108864 batch.size=8196
