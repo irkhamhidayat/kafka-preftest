@@ -12,7 +12,7 @@ io.on('connection', function(socket) {
 	socket.on('start', function(data) {
 		console.log('A user started the kafka test')
 
-		var text = 'kafka-test/bin/kafka-producer-perf-test.sh --topic test --num-records '+data.num+' --record-size '+data.size+' --throughput -1 --producer-props acks=1 bootstrap.servers='+data.host+':9092 buffer.memory=67108864 batch.size=8196'
+		var text = 'kafka/bin/kafka-producer-perf-test.sh --topic test --num-records '+data.num+' --record-size '+data.size+' --throughput -1 --producer-props acks=1 bootstrap.servers='+data.host+':9092 buffer.memory=67108864 batch.size=8196'
 		fs.writeFile('exec.sh', text, function (err, data) {
 		  	if (err) return console.log(err)
 		})
